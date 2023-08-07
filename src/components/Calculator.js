@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import calculate from '../logic/Calculate';
 
 function Calculator() {
   const [calcData, setCalcData] = useState({
@@ -8,8 +9,8 @@ function Calculator() {
     operation: null,
   });
 
-  function callActions() {
-    const newValueInput = '2';
+  function callActions(e) {
+    const newValueInput = calculate(calcData, e.target.value);
     setCalcData(newValueInput);
   }
   function CalBtn(props) {
@@ -42,7 +43,7 @@ function Calculator() {
             <CalBtn characterStr="AC" bgColor="bg-white btn p-normal" />
             <CalBtn characterStr="+/-" bgColor="bg-white btn p-normal" />
             <CalBtn characterStr="%" bgColor="bg-white btn p-normal" />
-            <CalBtn characterStr="+" bgColor="bg-orange btn p-normal" />
+            <CalBtn characterStr="÷" bgColor="bg-orange btn p-normal" />
           </div>
           <div>
             <CalBtn incrementNumber={7} bgColor="bg-white btn p-normal" />
@@ -60,7 +61,7 @@ function Calculator() {
             <CalBtn incrementNumber={1} bgColor="bg-white btn p-normal" />
             <CalBtn incrementNumber={2} bgColor="bg-white btn p-normal" />
             <CalBtn incrementNumber={3} bgColor="bg-white btn p-normal" />
-            <CalBtn characterStr="÷" bgColor="bg-orange btn p-normal" />
+            <CalBtn characterStr="+" bgColor="bg-orange btn p-normal" />
           </div>
           <div>
             <CalBtn characterStr="0" bgColor="bg-white btn p-abnormal" />
