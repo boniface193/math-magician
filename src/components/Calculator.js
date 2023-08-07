@@ -42,7 +42,7 @@ function Calculator() {
             <CalBtn characterStr="AC" bgColor="bg-white btn p-normal" />
             <CalBtn characterStr="+/-" bgColor="bg-white btn p-normal" />
             <CalBtn characterStr="%" bgColor="bg-white btn p-normal" />
-            <CalBtn characterStr="+" bgColor="bg-orange btn p-normal" />
+            <CalBtn characterStr="÷" bgColor="bg-orange btn p-normal" />
           </div>
           <div>
             <CalBtn incrementNumber={7} bgColor="bg-white btn p-normal" />
@@ -60,7 +60,7 @@ function Calculator() {
             <CalBtn incrementNumber={1} bgColor="bg-white btn p-normal" />
             <CalBtn incrementNumber={2} bgColor="bg-white btn p-normal" />
             <CalBtn incrementNumber={3} bgColor="bg-white btn p-normal" />
-            <CalBtn characterStr="÷" bgColor="bg-orange btn p-normal" />
+            <CalBtn characterStr="+" bgColor="bg-orange btn p-normal" />
           </div>
           <div>
             <CalBtn characterStr="0" bgColor="bg-white btn p-abnormal" />
