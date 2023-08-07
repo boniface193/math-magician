@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import calculate from '../logic/Calculate';
 
 function Calculator() {
   const [calcData, setCalcData] = useState({
@@ -8,8 +9,8 @@ function Calculator() {
     operation: null,
   });
 
-  function callActions() {
-    const newValueInput = '2';
+  function callActions(e) {
+    const newValueInput = calculate(calcData, e.target.value);
     setCalcData(newValueInput);
   }
   function CalBtn(props) {
