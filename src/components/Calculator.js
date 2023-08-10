@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import calculate from '../logic/Calculate';
+import Quotes from './Quote';
 
 function Calculator() {
   const [calcData, setCalcData] = useState({
@@ -36,6 +37,7 @@ function Calculator() {
   return (
     <section className="show-cal">
       <p className="push-right">Lets do some math!</p>
+      <Quotes />
       <div className="mr-3 col-sm-8">
         <input type="text" className="show-input" value={initialValue} readOnly />
         <aside>
